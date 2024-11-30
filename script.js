@@ -1,7 +1,7 @@
 const pageOneAnimation = function () {
   let tl = gsap.timeline();
 
-  tl.form("nav h1,nav h4,nav button", {
+  tl.from("nav h1,nav h4,nav button", {
     y: -40,
     opacity: 0,
     duration: 0.3,
@@ -77,9 +77,10 @@ gsap.from(".services > div:nth-child(even)",{
 },"same")
 }
 pageTwoAnimation();
+console.log("bar gsap")
 
 const navigationLinksAnimation = function(){
-
+  console.log("gsap")
   const button = document.querySelector(".part2 > button");
   const links = document.querySelectorAll(".part2 > h4");
 
@@ -120,9 +121,8 @@ const navigationLinksAnimation = function(){
 }
 navigationLinksAnimation();
 
-
 gsap.from(".section3 > div",{
-  scale : .1,
+  scale : .2,
   duration : .8,
   opacity : 0,
   stagger : .2,
@@ -132,4 +132,5 @@ gsap.from(".section3 > div",{
     // markers : true,
     start : "top 80%"
   }
+
 })
